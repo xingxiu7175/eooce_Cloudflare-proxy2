@@ -2,14 +2,13 @@
 import { connect } from 'cloudflare:sockets';
 
 let subPath = 'link';     // 节点订阅路径,不修改将使用UUID作为订阅路径
-let proxyIP = '210.61.97.241:81';  // proxyIP 格式：ip、域名、ip:port、域名:port等,没填写port，默认使用443
-let password = '5dc15e15-f285-4a9d-959b-0e4fbdd77b63';  // 节点UUID
+let proxyIP = 'ProxyIP.Aliyun.CMLiussss.net';  // proxyIP 格式：ip 210.61.97.241:81、域名、ip:port、域名:port等,没填写port，默认使用443
+let password = 'f3269b56-a9ad-4e2d-a666-a00400377d79';  // 节点UUID
 let SSpath = '';          // 路径验证，为空则使用UUID作为验证路径
 
 // CF-CDN 
 let cfip = [ // 格式:优选域名:端口#备注名称、优选IP:端口#备注名称、[ipv6优选]:端口#备注名称、优选域名#备注 
-    'mfa.gov.ua#SG', 'saas.sin.fan#JP', 'store.ubi.com#SG','cf.130519.xyz#KR','cf.008500.xyz#HK', 
-    'cf.090227.xyz#SG', 'cf.877774.xyz#HK','cdns.doon.eu.org#JP','sub.danfeng.eu.org#TW','cf.zhetengsha.eu.org#HK'
+    'mfa.gov.ua#SNIP_Sg', 'saas.sin.fan#SNIP_Hk', 'store.ubi.com#SNIP_JP','cf.130519.xyz#SNIP_Kr','cf.008500.xyz#SNIP_Hk',  'cf.090227.xyz#SNIP_Sg', 'cf.877774.xyz#SNIP_Hk','cdns.doon.eu.org#SNIP_Jp','sub.danfeng.eu.org#SNIP_Tw','cf.zhetengsha.eu.org#SNIP_Hk'
 ];  // 感谢各位大佬维护的优选域名
 
 function closeSocketQuietly(socket) {
